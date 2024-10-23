@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin: 20px 0;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 8px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #0056b3; 
+        }
+
+        .button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none; 
+            display: inline-block; 
+            margin-top: 10px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                margin: 5px; 
+            }
+
+            h1, p {
+                text-align: center; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/quiz/add">Add Quiz</a>
+        <a href="/quiz/crud">Crud</a>
+    </nav>
+
+    <h1>Your Score</h1>
+    <p>You scored <%= correctScore %> out of <%= totalQuestions %>.</p>
+    <a href="/" class="button">Take Quiz Again</a> 
+</body>
+</html>
